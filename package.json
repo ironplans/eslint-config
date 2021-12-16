@@ -1,9 +1,18 @@
 {
   "name": "@ironplans/eslint-config",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js"
+  ],
   "version": "1.0.0",
   "description": "This package provides Iron Plan's ESLint config as an extensible shared config.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx "
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ironplans/eslint-config.git"
@@ -24,10 +33,13 @@
     "eslint": ">= 8",
     "eslint-config-airbnb": ">= 19",
     "eslint-config-airbnb-typescript": ">= 16",
+    "eslint-config-prettier": ">= 8",
     "eslint-plugin-import": ">= 2",
     "eslint-plugin-jsx-a11y": ">= 6",
     "eslint-plugin-react": ">= 7",
-    "eslint-plugin-react-hooks": ">= 4"
+    "eslint-plugin-react-hooks": ">= 4",
+    "prettier": ">= 2",
+    "react": ">= 16"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
@@ -35,11 +47,15 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "react": "^17.0.2"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "husky": {
+    "hooks": {}
   }
 }

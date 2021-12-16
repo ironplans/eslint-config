@@ -8,5 +8,15 @@ module.exports = {
         'react/require-default-props': 'off',
       },
     },
+    {
+      files: ['*.js', '*.jsx'],
+      rules: {
+        // disable rules that require type information for JS files
+        '@typescript-eslint/dot-notation': 'off',
+        '@typescript-eslint/no-implied-eval': 'off',
+        '@typescript-eslint/no-throw-literal': 'off',
+        '@typescript-eslint/return-await': 'off',
+      },
+    },
   ],
 }
