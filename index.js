@@ -1,5 +1,18 @@
 module.exports = {
   extends: ['airbnb', 'airbnb/hooks', 'airbnb-typescript', 'prettier'],
+  rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.test.ts',
+          '**/*.test.tsx',
+          '**/*.stories.tsx',
+          '**/*.config.js',
+        ],
+      },
+    ],
+  },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
